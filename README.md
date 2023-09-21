@@ -44,7 +44,7 @@ In the first data preprocessing stage, data transformation, data encoding, data 
 
 ## Modelling
 In modelling, the first modelling stage was carried out using logistic regression and random forest classifier. Here are the results:
-- When using the whte-box model such as Logistic Regression, the ROC score generated is quite well. However, the model's accuracy is no higher than 50% which indicates that each prediction is not any better than random guessing.
+- When using the white-box model such as Logistic Regression, the ROC score generated is quite well. However, the model's accuracy is no higher than 50% which indicates that each prediction is not any better than random guessing.
 - When using the black-box model such as Random Forest Classifier, the model's accuracy and the ROC score were worse than the model's accuracy and the ROC score of Logistic Regression.
   
 From the model's results, Clustering is considered to be used. Clustering might gives insight how many class is suitable using the pattern of the data.
@@ -62,10 +62,10 @@ The following is an explanation for each cluster found:
 
 ## Data Preprocessing II
 In the second data preprocessing stage, feature selection, correlation checking, data scaling, and data splitting are carried out. The following are the things to do for each stage:
-- Feature Selection: By using Decision Tree, it is proven that there are only a few features that play a role in creating clusters such as Total_Accounts, Length_Employed, Annual_Income, Debt_To_Income, Loan_Amount_Requested, etc. Feature dropping was carried out after knowing the features that did not contribute to the cluster classification such as Home_Owner, Verified_Income, Number of_Account_Opensions, Last_6 Months Questions, Loan_Purpose, and Gender.
+- Feature Selection: By using Decision Tree, it is proven that there are only a few features that play a role in creating clusters such as `Total_Accounts`, `Length_Employed`, `Annual_Income`, `Debt_To_Income`, `Loan_Amount_Requested`, etc. Feature dropping was carried out after knowing the features that did not contribute to the cluster classification such as `Home_Owner`, `Verified_Income`, `Number of_Account_Opensions`, `Last_6 Months Questions`, `Loan_Purpose`, and `Gender`.
 - Check Correlation: Look at the correlation of each variable using a heatmap, and the results are that all features do not have multicollinearity or the relationship between all independent variables is independent of each other.
 - Data Scaling: Scaling the `Loan_Ammount_Requested`, `Annual_Income`, and `Debt_To_Income` features using RobustScaler.
-- Data Splitting: Separated dependent and independent variables by dropping the feature cluster and store the values of other features into a variable called x (independent variable), and store the values of feature cluster in a variable called y (dependent variable). Then, the train and test set are divided with the proportion ratio 80:20. Train data will receive 80% of the overall data while test set will receive 20% of the overall data. Lastly, stratify sampling is used for the purpose of sampling so that the class proportions are equally divided and the frequency of each class for test data and train data is equal.
+- Data Splitting: Separate dependent and independent variables by dropping the feature cluster and store the values of other features into a variable called x (independent variable), and store the values of feature cluster in a variable called y (dependent variable). Then, the train and test set are divided with the proportion ratio 80:20. Train data will receive 80% of the overall data while test set will receive 20% of the overall data. Lastly, stratify sampling is used for the purpose of sampling so that the class proportions are equally divided and the frequency of each class for test data and train data is equal.
 
 ## Modelling II
 In the second modeling stage, it was carried out using the logistic regression algorithm, KNN, Adaboost and Gradient Tree Boosting. Here are the results:
