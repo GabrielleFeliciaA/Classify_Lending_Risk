@@ -2,7 +2,8 @@
 
 ## Introduction
 The data used in classifying lending risk is data taken via the Kaggle website from the following sources: https://www.kaggle.com/datasets/shravankoninti/janatahack-machine-learning-for-banking?select=train_fNxu4vz.csv
-The data used has 13 columns with the following information:
+
+The data used has 14 columns with the following information:
 - `Loan_ID` : Loan ID number.
 - `Loan_Amount_Requested` : Loan amount offered ($).
 - `Length_Employed` : How long have you worked?
